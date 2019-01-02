@@ -1,0 +1,5 @@
+d1 $ sound "bd sd" # n "3 3"
+# silence
+
+d2 $ sound "" # gain 1.5
+#
