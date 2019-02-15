@@ -22,7 +22,8 @@ d6 $ speed "1 -2 3 2" #sound "industrial" # gain 0.8
 # speed (every 4 (rev) $ run 4)
 # silence
 
-d7 $ every 4 (echo (negate 3/32)) $ speed "1 4 1 6" #sound "mt*4" # gain 0.8
+d7 $ every 4 (echo (negate 3/32)) $ speed "1 4 1 6" #sound "mt*4"
+# gain 1.2
 # speed (every 4 (rev) $ run 4)
 # silence
 
