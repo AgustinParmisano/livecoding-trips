@@ -1,4 +1,6 @@
-d1 $ sound "bd sd" # n "3 3" # gain 1.2
+d1 $ sound "bd sd" # n "3 3"
+# speed (every 2 (rev) $ run 5)
+# gain 1.2
 # silence
 
 d2 $ sound "cp:3" # speed "2" # crush 5 # gain 1.2
@@ -16,9 +18,8 @@ d5 $ speed "-5 2 1 -2" #sound "bd*4" # gain 0.8
 # speed (every 2 (rev) $ run 8)
 # silence
 
-d6 $ speed "1 -2 3 2" #sound "industrial" # gain 0.8
-# speed (every 4 (rev) $ run 4)
-# silence
+d3 $ every 8 (1 <~) $ n "0 2 1 4" # sound "bd" # speed "4"
+# gain 1.4 # speed (every 2 (rev) $ run 2)
 
 d7 $ every 4 (echo (negate 3/32)) $ speed "1 4 1 6" #sound "bd*4" # gain 0.8
 # speed (every 4 (rev) $ run 4) # gain 1.2

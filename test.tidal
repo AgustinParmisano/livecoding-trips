@@ -1,14 +1,17 @@
 cps(180/50/4)
 
 d1 $ sound "[bd ] [bd bass]" # up (run 4)
+# gain 1
 
-d2 $ pan "0 1 0.25 0.75" # sound "bass2" # crush "6"
+d2 $ pan "0 1" # sound "ho" # crush "6"
+# speed (every 4 (rev) $ run 2)
 # silence
+
 d7 $ sound "cp cp" # crush "4"
 # silence
 
-d3 $ every 4 (0.5 <~) $ n "0 2 1 4" # sound "mt*2" # speed "1"
-# gain 1.2
+d3 $ every 4 (0.5 <~) $ n "0 2 1 4" # sound "ho*2" # speed "4"
+# gain 1 # speed (every 4 (rev) $ run 4)
 # silence
 
 d4 $ every 4 (0.5 <~) $ n "3" # sound "bass2" # crush "1" # gain "0.7"
