@@ -3,18 +3,23 @@ d1 $ sound "bd sd" # n "3 3"
 # gain 1.2
 # silence
 
-d2 $ sound "cp:3" # speed "2" # crush 5 # gain 1.2
+d2 $ sound "cp:3" # speed "2" # crush 5
+# gain 1.4
 # speed (every 2 (rev) $ run 2)
 # silence
 
-d3 $ sound (samples "drum drum" (run 1)) # crush "7" # gain 0.8
+d3 $ sound (samples "drum drum" (run 1)) # crush "7"
+# gain 1.5
 # speed (every 4 (rev) $ run 2)
 
-d4 $ speed "1 4 1 2" #sound "notes*4" # gain 0.8
-# speed (every 4 (rev) $ run 8)
+d4 $ speed "2 1 2 4" #sound "notes*4"
+# gain 1.2
+# crush 8
+# speed (every 2 (rev) $ run 4)
 # silence
 
-d5 $ speed "-5 2 1 -2" #sound "bd*4" # gain 0.8
+d5 $ speed "-5 2 1 -2" #sound "bd*4"
+# gain 1.2
 # speed (every 2 (rev) $ run 8)
 # silence
 
