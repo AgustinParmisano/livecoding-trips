@@ -1,0 +1,13 @@
+cps(200/40/2)
+
+d1 $ sound (slow 4 "cp cp") # crush "20" # gain 0.9
+# silence
+
+d3 $ sound (slow 4 "bass")  # gain 0.9
+# silence
+
+
+d2 $ n (slow 9 "~ e b g ~ e b g ~ e b g b g e") # s "superpiano" # sustain "4" # gain "0.7"
+# silence
+
+hush

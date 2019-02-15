@@ -6,16 +6,24 @@ d2 $ pan "0 1 0.25 0.75" # sound "bass2" # crush "6"
 # silence
 d7 $ sound "cp cp" # crush "4"
 # silence
-d3 $ every 4 (0.5 <~) $ n "0 2 1 4" # sound "cp" # speed "2"
+
+d3 $ every 4 (0.5 <~) $ n "0 2 1 4" # sound "mt*2" # speed "1"
+# gain 1.2
 # silence
 
 d4 $ every 4 (0.5 <~) $ n "3" # sound "bass2" # crush "1" # gain "0.7"
 # silence
 
-d5 $ sound (samples "drum hh cp hh" (run 3)) # crush "7" # gain 1.3
+d7 $ sound (samples "drum:2 bd cp drum:5" (run 3)) # crush "8"
+# gain 1.3 # speed (every 4 (rev) $ run 2)
 # silence
 
-d6 $ sound (samples "ho:3 cp hh bd" (run 3)) # crush "4" # gain 0.9
+d6 $ sound (samples "ho:3 cp hh bd" (run 3)) # crush "4"
+# gain 0.9 # gain 1.3 # speed (every 2 (rev) $ run 4)
+# silence
+
+d9 $ sound (samples "bd drum:2 cp drum:2" (run 3)) # crush "6"
+# gain 1.3 # speed (every 4 (rev) $ run 2)
 # silence
 
 hush

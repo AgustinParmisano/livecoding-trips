@@ -1,16 +1,16 @@
 cps(200/50/4)
 
-d1 $ speed "1 4 1 2" # sound (samples "drum drum" (run 1)) # crush "20" # gain 1
+d1 $ speed "1 4 1 2" # sound (samples "drum drum" (run 1)) # crush "20" # gain 0.9
 # silence
 
 d2 $ sound "cp:3" # speed "2" # crush 5 # gain 1
-# speed (every 4 (rev) $ run 2)
+# speed (every 1 (rev) $ run 2)
 # silence
 
 d3 $ sound (samples "drum drum" (run 1)) # crush "7" # gain 0.8
-# speed (every 4 (rev) $ run 8)
+# speed (every 4 (rev) $ run 2)
 
-d4 $ speed "1 2 1 2" #sound "notes*4" # gain 0.8
+d4 $ speed "2 6 1 2" #sound "guitar*4" # gain 0.8
 # speed (every 4 (rev) $ run 8)
 # silence
 
@@ -27,10 +27,17 @@ d7 $ every 4 (echo (negate 3/32)) $ speed "1 4 1 6" #sound "mt*4" # gain 0.8
 # silence
 
 d8 $ every 8 (echo (negate 3/32)) $ speed "1 2 3 1" #sound "bass*4" # gain 1
-# speed (every 4 (rev) $ run 4)
+# speed (every 4 (rev) $ run 4) # gain 1.5
 # silence
 
-d9 $ n (slow 2 $ "[[c4,e4,g4,c5]*4 [e4,g4,b5,e5]*4]" + "<12 7>") # s "superpiano"
- # velocity (slow 8 $ scale 0.7 1 sine1) # sustain "5" # gain 0.7
+d8 $ n (slow 4 $ "[c1 * 2 b2 * 2 e2 b2 * 2] ") # s "harp"
+  # velocity (slow 6 $ scale 0.4 0.9 sine1) # sustain "4" # gain 1
+# silence
+
+d9 $ n (slow 6 $ "[b5 g5] e5 e5 b5 b5 ~ b5 b5 g5 g5 b5 b5 b5 e5 ~ g5 g5 b5 b5 e5] + <12 7>") # s "superpiano"
+  # velocity (slow 1 $ scale 0.6 0.9 sine1) # sustain "5" # gain 0.8
+# silence
+
+d1 $ n (slow 2 "e b g") # s "superpiano" # gain "0.7"
 
 hush
